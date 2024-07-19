@@ -2,6 +2,7 @@ import 'package:demo_app/constants/icon_constants.dart';
 import 'package:demo_app/group_chat/widgets/group_match_odd.dart';
 import 'package:demo_app/widgets/svg_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:stroke_text/stroke_text.dart';
 
 import '../constants/image_constants.dart';
 import '../theme/theme_color.dart';
@@ -117,11 +118,11 @@ class _CustomInfo extends StatelessWidget {
                         style: BorderStyle.solid,
                       ),
                     ),
-                    child: const Column(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 5.0),
-                        Text(
+                        const SizedBox(height: 2.0),
+                        const Text(
                           'NGOAI HANG ANH',
                           style: TextStyle(
                             color: AppColor.primaryTextColor,
@@ -130,34 +131,39 @@ class _CustomInfo extends StatelessWidget {
                           ),
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 2.0),
-                        Text(
-                          '0 : 1',
-                          style: TextStyle(
-                            color: AppColor.primaryTextColor,
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.w900,
+                        ShaderMask(
+                          blendMode: BlendMode.srcIn,
+                          shaderCallback: (bounds) =>
+                              AppColor.secondaryGradient.createShader(
+                            Rect.fromLTWH(0, 0, bounds.width, bounds.height),
                           ),
-                          textAlign: TextAlign.center,
-                        ),
-                        Text(
-                          'Ty le keo',
-                          style: TextStyle(
-                            color: AppColor.primaryTextColor,
-                            fontSize: 14.0,
-                            fontWeight: FontWeight.w900,
+                          child: StrokeText(
+                            text: '0 : 1',
+                            strokeColor: AppColor.primaryColor,
+                            strokeWidth: 1.0,
+                            textStyle: TextStyle(
+                              color: AppColor.primaryTextColor,
+                              fontSize: 32.0,
+                              fontWeight: FontWeight.w900,
+                              shadows: <Shadow>[
+                                Shadow(
+                                  offset: const Offset(0.0, 2.0),
+                                  blurRadius: 2.0,
+                                  color: Colors.black.withOpacity(0.25),
+                                ),
+                              ],
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
-                        SizedBox(height: 5.0),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             SizedBox(
                               width: 20.0,
                               height: 20.0,
                               child: SVGWidget(
-                                path: IconConstants.add,
+                                path: IconConstants.left,
                                 width: 20.0,
                                 height: 20.0,
                                 size: SvgWidgetSize.none,
@@ -182,7 +188,7 @@ class _CustomInfo extends StatelessWidget {
                               width: 20.0,
                               height: 20.0,
                               child: SVGWidget(
-                                path: IconConstants.add,
+                                path: IconConstants.right,
                                 width: 20.0,
                                 height: 20.0,
                                 size: SvgWidgetSize.none,

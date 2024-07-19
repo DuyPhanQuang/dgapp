@@ -20,6 +20,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   cached_network_image: ^3.3.1
   gif_view: ^0.4.4
+  stroke_text: ^0.0.3
 
 dev_dependencies:
   flutter_test:

@@ -11,6 +11,8 @@ class IconConstants {
   static const String tab4 = 'assets/svg/tab4.svg';
   static const String tab5 = 'assets/svg/tab5.svg';
   static const String up = 'assets/svg/up.svg';
+  static const String left = 'assets/svg/left.svg';
+  static const String right = 'assets/svg/right.svg';
   static const String follow = 'assets/svg/follow.svg';
   static const String changeCommentator = 'assets/svg/change_commentator.svg';
 }
