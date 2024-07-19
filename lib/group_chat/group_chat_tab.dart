@@ -91,7 +91,7 @@ class _Header extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 8.0),
+                    const SizedBox(width: 8.0),
                   ],
                 ),
                 Container(
@@ -178,7 +178,7 @@ class GroupChatTab extends StatelessWidget {
           ),
           Positioned.fill(
             top: 81.0 + 5.0 + context.queryPaddingTop,
-            child: GroupChatContent(),
+            child: const GroupChatContent(),
           ),
         ],
       ),

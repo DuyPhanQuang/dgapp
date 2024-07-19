@@ -34,14 +34,27 @@ class GroupMatchOdd extends StatelessWidget {
                     bottom: 1.0,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    // gradient: AppColor.accentGradient,
+                    gradient: AppColor.accentGradient,
                     borderRadius: BorderRadius.circular(25.0),
                     border: Border.all(
                       width: 1.0,
                       color: Colors.white,
                       style: BorderStyle.solid,
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 0,
+                        blurRadius: 11,
+                        offset: const Offset(0, 5),
+                      ),
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.09),
+                        spreadRadius: 0,
+                        blurRadius: 20,
+                        offset: const Offset(0, 20),
+                      ),
+                    ],
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -97,14 +110,27 @@ class GroupMatchOdd extends StatelessWidget {
                     bottom: 1.0,
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.white,
-                    // gradient: AppColor.accentGradient,
+                    gradient: AppColor.accentGradient,
                     borderRadius: BorderRadius.circular(25.0),
                     border: Border.all(
                       width: 1.0,
                       color: Colors.white,
                       style: BorderStyle.solid,
                     ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 0,
+                        blurRadius: 11,
+                        offset: const Offset(0, 5),
+                      ),
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.09),
+                        spreadRadius: 0,
+                        blurRadius: 20,
+                        offset: const Offset(0, 20),
+                      ),
+                    ],
                   ),
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

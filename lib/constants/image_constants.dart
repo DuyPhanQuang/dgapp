@@ -6,4 +6,5 @@ class ImageConstants {
   static const String gif1 = 'assets/gif/gif1.gif';
   static const String gif2 = 'assets/gif/gif2.gif';
   static const String gif3 = 'assets/gif/gif3.gif';
+   static const String thumbnail = 'assets/images/thumbnail.png';
 }

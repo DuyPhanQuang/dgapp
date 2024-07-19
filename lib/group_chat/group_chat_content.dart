@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/image_constants.dart';
 import '../theme/theme_color.dart';
+import 'widgets/group_commentator.dart';
+import 'widgets/group_thumnail_live_video.dart';
 
 class _SubInfo extends StatelessWidget {
   const _SubInfo({super.key});
@@ -363,7 +365,7 @@ class GroupChatContent extends StatelessWidget {
               right: 5.0,
               top: 5.0,
             ),
-            child: Container(
+            child: const SizedBox(
               height: 100.0,
               child: Stack(
                 children: [
@@ -372,6 +374,30 @@ class GroupChatContent extends StatelessWidget {
                 ],
               ),
             ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: GroupCommentator(),
+        ),
+        const SliverToBoxAdapter(
+          child: GroupChatThumbnailLiveVideo(),
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            height: 300.0,
+            color: Colors.blue,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            height: 250.0,
+            color: Colors.red,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Container(
+            height: 250.0,
+            color: Colors.blueGrey,
           ),
         ),
       ],

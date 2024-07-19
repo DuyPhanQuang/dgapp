@@ -32,7 +32,7 @@ class SVGWidget extends StatelessWidget {
       case SvgWidgetSize.md:
         return 24.0;
       case SvgWidgetSize.lg:
-        return 36.0;
+        return 30.0;
       default:
         return 0.0;
     }
