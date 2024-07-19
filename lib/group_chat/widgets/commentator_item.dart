@@ -16,6 +16,9 @@ class _CommentatorItemState extends State<CommentatorItem> {
     return Container(
       width: 40.0,
       height: 35.0,
+      margin: const EdgeInsets.only(
+        top: 3.0,
+      ),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

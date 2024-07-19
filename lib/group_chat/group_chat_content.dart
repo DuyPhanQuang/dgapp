@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/image_constants.dart';
 import '../theme/theme_color.dart';
+import 'widgets/group_comment_list_view.dart';
 import 'widgets/group_commentator.dart';
 import 'widgets/group_thumnail_live_video.dart';
 
@@ -382,11 +383,26 @@ class GroupChatContent extends StatelessWidget {
         const SliverToBoxAdapter(
           child: GroupChatThumbnailLiveVideo(),
         ),
-        SliverToBoxAdapter(
-          child: Container(
-            height: 300.0,
-            color: Colors.blue,
+        SliverPadding(
+          padding: const EdgeInsets.symmetric(
+            vertical: 8.0,
+            horizontal: 10.0,
           ),
+          sliver: SliverToBoxAdapter(
+          child: Container(
+            height: 475.0,
+            decoration: BoxDecoration(
+              color: Colors.white,
+                borderRadius: BorderRadius.circular(15.0),
+                border: Border.all(
+                  width: 1.0,
+                  color: Colors.white,
+                  style: BorderStyle.solid,
+                ),
+            ),
+            child: const GroupChatCommentListView(),
+          ),
+        ),
         ),
         SliverToBoxAdapter(
           child: Container(
