@@ -71,7 +71,7 @@ class GroupChatThumbnailLiveVideo extends StatelessWidget {
             right: 5.0,
             bottom: 10.0,
             child: Container(
-              width: context.width * 0.5,
+              width: context.width * 0.56,
               height: 35.0,
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(

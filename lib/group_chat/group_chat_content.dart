@@ -407,14 +407,8 @@ class GroupChatContent extends StatelessWidget {
         SliverToBoxAdapter(
           child: Container(
             height: 250.0,
-            color: Colors.red,
-          ),
-        ),
-        SliverToBoxAdapter(
-          child: Container(
-            height: 250.0,
             color: Colors.blueGrey,
-            padding:  const EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 12.0,
             ),
             child: const Wrap(

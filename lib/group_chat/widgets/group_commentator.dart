@@ -251,12 +251,16 @@ class GroupCommentator extends StatelessWidget {
                                     height: 15.0,
                                   ),
                                   SizedBox(width: 2.0),
-                                  Text(
-                                    '8855',
-                                    style: TextStyle(
-                                      fontSize: 14.0,
-                                      color: AppColor.primaryTextColor,
-                                      fontWeight: FontWeight.w500,
+                                  Expanded(
+                                    child: Text(
+                                      '8875',
+                                      style: TextStyle(
+                                        fontSize: 14.0,
+                                        color: AppColor.primaryTextColor,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
                                     ),
                                   ),
                                 ],

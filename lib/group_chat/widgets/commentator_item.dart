@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:math' as math;
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +14,28 @@ class CommentatorItem extends StatefulWidget {
 }
 
 class _CommentatorItemState extends State<CommentatorItem> {
+  late Timer _timer;
+  bool _showLive = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      final number = math.Random();
+      if (number.nextInt(100) % 2 == 0) {
+        setState(() {
+          _showLive = !_showLive;
+        });
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -60,28 +85,29 @@ class _CommentatorItemState extends State<CommentatorItem> {
                     ),
                   ),
                 ),
-                Positioned(
-                  top: 14.0,
-                  left: 0.0,
-                  right: 0.0,
-                  bottom: 0.0,
-                  child: Container(
-                    height: 14.0,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      borderRadius: BorderRadius.circular(2.0),
-                    ),
-                    child: const Text(
-                      'LIVE',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 4.0,
-                        fontWeight: FontWeight.w400,
+                if (_showLive)
+                  Positioned(
+                    top: 14.0,
+                    left: 0.0,
+                    right: 0.0,
+                    bottom: 0.0,
+                    child: Container(
+                      height: 14.0,
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        borderRadius: BorderRadius.circular(2.0),
                       ),
-                      textAlign: TextAlign.center,
+                      child: const Text(
+                        'LIVE',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 4.0,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
-                ),
               ],
             ),
           ),

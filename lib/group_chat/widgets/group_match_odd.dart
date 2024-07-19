@@ -59,12 +59,16 @@ class GroupMatchOdd extends StatelessWidget {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '-0.75',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xFF5C5C5C),
+                      Expanded(
+                        child: Text(
+                          '-0.75',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFF5C5C5C),
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       SVGWidget(
@@ -73,12 +77,16 @@ class GroupMatchOdd extends StatelessWidget {
                         width: 8.0,
                         height: 8.0,
                       ),
-                      Text(
-                        '1.92',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.primaryTextColor,
+                      Expanded(
+                        child: Text(
+                          '1.92',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w700,
+                            color: AppColor.primaryTextColor,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],
@@ -135,12 +143,16 @@ class GroupMatchOdd extends StatelessWidget {
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        '0/3.25',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w400,
-                          color: Color(0xFF5C5C5C),
+                      Expanded(
+                        child: Text(
+                          '0/3.25',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w400,
+                            color: Color(0xFF5C5C5C),
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       SVGWidget(
@@ -149,12 +161,16 @@ class GroupMatchOdd extends StatelessWidget {
                         width: 8.0,
                         height: 8.0,
                       ),
-                      Text(
-                        '1.95',
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          fontWeight: FontWeight.w700,
-                          color: AppColor.primaryTextColor,
+                      Expanded(
+                        child: Text(
+                          '1.95',
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w700,
+                            color: AppColor.primaryTextColor,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                     ],
