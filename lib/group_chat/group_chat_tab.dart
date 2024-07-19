@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:demo_app/constants/icon_constants.dart';
 import 'package:demo_app/constants/image_constants.dart';
 import 'package:demo_app/extension/context_extension.dart';
@@ -18,10 +20,13 @@ class _BackgroundTab extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: double.infinity,
-      child: Image.asset(
-        ImageConstants.background,
-        filterQuality: FilterQuality.high,
-        fit: BoxFit.fitHeight,
+      child: ImageFiltered(
+        imageFilter: ImageFilter.blur(sigmaX: 0, sigmaY: 10.0),
+        child: Image.asset(
+          ImageConstants.background,
+          filterQuality: FilterQuality.high,
+          fit: BoxFit.fitHeight,
+        ),
       ),
     );
   }
