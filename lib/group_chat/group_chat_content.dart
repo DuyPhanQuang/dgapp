@@ -389,20 +389,20 @@ class GroupChatContent extends StatelessWidget {
             horizontal: 10.0,
           ),
           sliver: SliverToBoxAdapter(
-          child: Container(
-            height: 475.0,
-            decoration: BoxDecoration(
-              color: Colors.white,
+            child: Container(
+              height: 475.0,
+              decoration: BoxDecoration(
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(15.0),
                 border: Border.all(
                   width: 1.0,
                   color: Colors.white,
                   style: BorderStyle.solid,
                 ),
+              ),
+              child: const GroupChatCommentListView(),
             ),
-            child: const GroupChatCommentListView(),
           ),
-        ),
         ),
         SliverToBoxAdapter(
           child: Container(
@@ -414,6 +414,42 @@ class GroupChatContent extends StatelessWidget {
           child: Container(
             height: 250.0,
             color: Colors.blueGrey,
+            padding:  const EdgeInsets.only(
+              top: 12.0,
+            ),
+            child: const Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              runAlignment: WrapAlignment.start,
+              alignment: WrapAlignment.center,
+              spacing: 16.0, // gap between adjacent chips
+              runSpacing: 24.0, // gap between lines
+              children: <Widget>[
+                Text(
+                  'LICH TRUC TIEP',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'KEO BONG DA',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'LICH THI DAU',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  'KET QUA BONG DA',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
